@@ -13,15 +13,14 @@ class ListBooks extends Component {
     
     render(){
         const books = this.props.books
-        console.log('in ListBooks')
-        console.log(books)
         return(
             <div className="bookshelf-books">
                 <ol className="books-grid">
                     {books.map((book)=>(
                         
                         //  calling Book component to view the book 
-                        <Book book = {book}  handleChange = {this.props.handleChange}/>
+                        <Book key = {book.id} book = {book}  handleChange = {this.props.handleChange}/>
+
                     ))}
                 </ol>
             </div>

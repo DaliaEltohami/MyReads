@@ -14,6 +14,7 @@ class Book extends Component{
         this.props.handleChange(this.props.book,e.target.value)
     }
 
+    // Handler Method to render default cover image for the book if it didn't have one
     bookImage = ()=>{
         let url = '' 
         if(this.props.book.imageLinks){
@@ -26,16 +27,15 @@ class Book extends Component{
 
 
     render(){
-        const {book} = this.props
         return(
             // we will return jsx to display the book 
-            <li key = {book.id}>
+            <li >
                 <div className="book">
                     <div className="book-top">
                     <div className="book-cover" style={{ width: 128, height: 193,
                          backgroundImage: `url(${this.bookImage()})` }}></div>
                     <div className="book-shelf-changer">
-                        <select value = {book.shelf ? book.shelf : 'none'}
+                        <select value = {this.props.book.shelf ? this.props.book.shelf : 'none'}
                         onChange = {this.submitChange}>
                         <option value="move" disabled>Move to...</option>
                         <option value="currentlyReading">Currently Reading</option>
@@ -45,8 +45,8 @@ class Book extends Component{
                         </select>
                         </div>
                     </div>
-                    <div className="book-title">{book.title}</div>
-                    <div className="book-authors">{book.authors}</div>
+                    <div className="book-title">{this.props.book.title}</div>
+                    <div className="book-authors">{this.props.book.authors}</div>
                 </div>
             </li>
         )

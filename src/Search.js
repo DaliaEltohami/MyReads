@@ -24,7 +24,7 @@ class Search extends Component{
 
     // handle method to manage the value property on input value change
     changeValue(value){
-        console.log(value)
+
         this.setState({value : value})
         // invokig handleInputChange method passing it the value
         this.handleInputChange(value)
