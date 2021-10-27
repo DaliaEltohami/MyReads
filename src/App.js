@@ -22,7 +22,8 @@ class BooksApp extends React.Component {
 
     currentlyReading : [],
     wantToRead : [],
-    read :[],
+    read : [],
+    books : [],
     
     value : '',
 
@@ -32,13 +33,12 @@ class BooksApp extends React.Component {
 
     // we use componenDidMount lifecycle event to update the values of the three shelves when the component id mounted to the DOM 
 
-    console.log(BooksAPI.getAll())
-
     BooksAPI.getAll().then((books)=>{
       this.setState((currentState)=>({
         currentlyReading : books.filter(b=>(b.shelf === 'currentlyReading')),
         wantToRead : books.filter(b=>(b.shelf === 'wantToRead')),
-        read : books.filter(b=>(b.shelf === 'read'))
+        read : books.filter(b=>(b.shelf === 'read')),
+        books : books
       }))
     })
 
@@ -93,8 +93,6 @@ class BooksApp extends React.Component {
     console.log(book.title)
     console.log(shelf)
     BooksAPI.update(book,shelf).then(()=>{
-      console.log('updated!')
-      console.log(BooksAPI.getAll())
       BooksAPI.getAll().then((books)=>{
         this.setState((currentState)=>({
           currentlyReading : books.filter(b=>(b.shelf === "currentlyReading")),
@@ -111,11 +109,7 @@ class BooksApp extends React.Component {
   render() {
     // Destructing the state properties to ease of use
 
-    const {currentlyReading,wantToRead,read} = this.state
-
-    // Printing values to the console for checking
-
-    console.log(currentlyReading,wantToRead,read)
+    const {currentlyReading,wantToRead,read,books} = this.state
 
     // define shelves array which consist of three objects each one represent a shelf and have to properties name an books array 
 
@@ -132,7 +126,6 @@ class BooksApp extends React.Component {
         books : [...read]
       }
     ]
-    console.log(shelves)
     return (
       <div className = 'app'>
          {/* Define the Route of the main page and render it's component with passing props */}
@@ -148,7 +141,7 @@ class BooksApp extends React.Component {
         <Route exact path = '/search' render = {()=>(
           // Calling Search component which will render the search page and handle the search mechanism 
 
-          <Search handleChange = {this.handleChange}/>
+          <Search books = {books} handleChange = {this.handleChange}/>
         )} />
         
       </div>

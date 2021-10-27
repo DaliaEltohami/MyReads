@@ -34,20 +34,29 @@ class Search extends Component{
 
     // this method will handle the search mechanism 
     handleInputChange = (input)=>{
-        console.log(input)
+        const mainBooks = this.props.books
+        
         // checking if there is an input 
         if(input)
         {
             // make api call to search the books passing the value of the input
             BooksAPI.search(input).then((books)=>{
-                console.log(books)
-                console.log(books.length)
+                
                 // checking if the returned promise from the api call contains array of books or not
                 if (books.length)
                 {
                     // if true then make the value of searchedBooks state equals to the returned array of books
+                    
                     this.setState({
-                        searchedBooks : books,
+                        searchedBooks : books.map(b1=>{
+                            mainBooks.map(b2=>{
+                                if(b1.id === b2.id){
+                                    b1.shelf = b2.shelf
+                                }
+                                return b1;
+                            })
+                            return b1;
+                        }),
                         notFound : false
 
                     })
