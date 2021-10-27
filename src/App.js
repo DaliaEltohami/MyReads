@@ -90,14 +90,13 @@ class BooksApp extends React.Component {
 
   handleChange = (book,shelf) =>{
 
-    console.log(book.title)
-    console.log(shelf)
     BooksAPI.update(book,shelf).then(()=>{
       BooksAPI.getAll().then((books)=>{
         this.setState((currentState)=>({
           currentlyReading : books.filter(b=>(b.shelf === "currentlyReading")),
           wantToRead : books.filter(b=>(b.shelf === 'wantToRead')),
-          read : books.filter(b=>(b.shelf === 'read'))
+          read : books.filter(b=>(b.shelf === 'read')),
+          books : books
         }))
       })
     })
