@@ -6,7 +6,7 @@
 * [Used Languages](#used-languages)
 * [Features](#features)
 * [Dependencies](#dependencies)
-* [Installation and Usage](#installation and usage)
+* [Installation and Usage](#installation-and-usage)
 * [Author](#author)
 
 ## Description
