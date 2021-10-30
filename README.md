@@ -45,7 +45,7 @@ In MyReads project, I created a bookshelf app that allows you to select and cate
 $ cd ../MyReads
 $ npm install
 ```
-- TO run the Project :
+- To run the Project :
 ```
 $ npm start
 ```
