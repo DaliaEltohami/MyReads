@@ -38,7 +38,8 @@ In MyReads project, I created a bookshelf app that allows you to select and cate
 -  react-router-dom : "^5.3.0",
 -  react-scripts : "2.1.1"
 
-## Installaion and Usage
+## Installation and Usage
+
 
 ## Author
 - **Dalia Eltohami**
