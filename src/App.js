@@ -144,6 +144,8 @@ class BooksApp extends React.Component {
         )} />
         
       </div>
-      
+      )
+  }
+}
 
 export default BooksApp
