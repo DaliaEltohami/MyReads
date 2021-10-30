@@ -23,7 +23,7 @@ In MyReads project, I created a bookshelf app that allows you to select and cate
 ## Features
 - The main page shows 3 shelves for books. Each book is shown on the correct shelf(Currently Reading, Want to Read, Read), along with its title and all of its authors.
 - The main page shows a control that allows users to move books between shelves.
-- The main page has a link to **/search**, a search page that allows you to find books and add it to your library.
+- The main page has a link to `**/search**`, a search page that allows you to find books and add it to your library.
 - When a book is on a bookshelf, it has the same state on both the main application page and the search page.
 - The search page also has a link to / (the root URL), which leads back to the main page.
 - When you navigate back to the main page from the search page, you see all of the selections you made on the search page in your library.
