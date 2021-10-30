@@ -39,7 +39,7 @@ In MyReads project, I created a bookshelf app that allows you to select and cate
 -  react-scripts : "2.1.1"
 
 ## Installation and Usage
-
+- Prerequistes : [Node.js](https://nodejs.org/en/download/)
 
 ## Author
 - **Dalia Eltohami**
