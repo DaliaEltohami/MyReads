@@ -9,7 +9,8 @@ import PropTypes from 'prop-types'
 class Search extends Component{
 
     static propTypes = {
-        handleChange : PropTypes.func.isRequired
+        handleChange : PropTypes.func.isRequired,
+        books : PropTypes.array.isRequired
     }
     
     // Define state properties to save the result of the search 
