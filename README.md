@@ -6,6 +6,7 @@
 * [Used Languages](#used-languages)
 * [Features](#features)
 * [Dependencies](#dependencies)
+* [Installation and Usage](#installation and usage)
 * [Author](#author)
 
 ## Description
@@ -36,6 +37,8 @@ In MyReads project, I created a bookshelf app that allows you to select and cate
 -  react-dom : "^16.6.3",
 -  react-router-dom : "^5.3.0",
 -  react-scripts : "2.1.1"
+
+## Installaion and Usage
 
 ## Author
 - **Dalia Eltohami**
