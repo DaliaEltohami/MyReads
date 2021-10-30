@@ -41,8 +41,9 @@ In MyReads project, I created a bookshelf app that allows you to select and cate
 ## Installation and Usage
 - Prerequistes : [Node.js](https://nodejs.org/en/download/)
 - To install required packages : 
+- 
   `$ cd ../MyReads
-  $ npm install`
+   $ npm install`
 
 ## Author
 - **Dalia Eltohami**
